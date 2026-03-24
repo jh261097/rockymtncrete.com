@@ -1,22 +1,11 @@
 export default function Page() {
   const services = [
-    "Driveways & Patios",
-    "Sidewalks & Repairs",
+    "Driveways",
+    "Patios",
+    "Sidewalks",
+    "Concrete Repair",
     "Commercial Concrete",
     "Epoxy Floors",
-  ];
-
-  const areas = [
-    "Colorado Springs",
-    "Denver",
-    "Castle Rock",
-    "Aurora",
-    "Centennial",
-    "Littleton",
-    "Lakewood",
-    "Parker",
-    "Highlands Ranch",
-    "Woodland Park",
   ];
 
   return (
@@ -28,6 +17,7 @@ export default function Page() {
         minHeight: "100vh",
       }}
     >
+      {/* HERO */}
       <section
         style={{
           backgroundColor: "#111",
@@ -39,15 +29,15 @@ export default function Page() {
           <p style={{ letterSpacing: "1px", marginBottom: "10px", color: "#ccc" }}>
             ROCKY MOUNTAIN CRETE LLC
           </p>
+
           <h1 style={{ fontSize: "52px", margin: "0 0 18px 0", lineHeight: 1.1 }}>
-  Built to Last. Crafted with Precision.
-  <br />
-  Built for Colorado.
-</h1>
+            Built to Last. Crafted with Precision.
+            <br />
+            Built for Colorado.
           </h1>
+
           <p style={{ fontSize: "20px", maxWidth: "720px", lineHeight: 1.6 }}>
             Reliable concrete services for homeowners and businesses across Colorado.
-            We focus on quality work, clean finishes, and straightforward communication.
           </p>
 
           <div style={{ marginTop: "28px", display: "flex", gap: "14px", flexWrap: "wrap" }}>
@@ -62,28 +52,31 @@ export default function Page() {
                 fontWeight: "bold",
               }}
             >
-              Call 719-201-9660
+              Call Now
             </a>
+
             <a
-              href="mailto:rockymountaincretellc@gmail.com"
+              href="#quote"
               style={{
-                border: "1px solid #fff",
-                color: "#fff",
+                backgroundColor: "#f59e0b",
+                color: "#111",
                 padding: "14px 22px",
                 textDecoration: "none",
                 borderRadius: "8px",
                 fontWeight: "bold",
               }}
             >
-              Email Us
+              Get Free Quote
             </a>
           </div>
         </div>
       </section>
 
+      {/* SERVICES */}
       <section style={{ padding: "60px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>Our Services</h2>
+
           <div
             style={{
               display: "grid",
@@ -108,8 +101,9 @@ export default function Page() {
         </div>
       </section>
 
-      <section style={{ padding: "0 24px 60px 24px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+      {/* QUOTE FORM */}
+      <section id="quote" style={{ padding: "0 24px 70px 24px" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <div
             style={{
               backgroundColor: "#fff",
@@ -118,125 +112,72 @@ export default function Page() {
               boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
             }}
           >
-            <h2 style={{ fontSize: "36px", marginTop: 0 }}>Contact</h2>
-            <p style={{ fontSize: "20px", lineHeight: 1.8 }}>
-              <strong>Phone:</strong> 719-201-9660
-              <br />
-              <strong>Email:</strong> rockymountaincretellc@gmail.com
-            </p>
-          </div>
-        </div>
-      </section>
+            <h2 style={{ fontSize: "36px", marginTop: 0 }}>Get a Free Quote</h2>
 
-      <section style={{ padding: "0 24px 70px 24px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "20px" }}>Service Areas</h2>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "12px",
-            }}
-          >
-            {areas.map((area) => (
-              <span
-                key={area}
+            <form
+              action="https://formspree.io/f/xwvrgqzb"
+              method="POST"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+                marginTop: "20px",
+              }}
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                style={{ padding: "14px" }}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                style={{ padding: "14px" }}
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                style={{ padding: "14px" }}
+              />
+
+              <select name="service" required style={{ padding: "14px" }} defaultValue="">
+                <option value="" disabled>
+                  Select Service
+                </option>
+                <option>Driveways</option>
+                <option>Patios</option>
+                <option>Sidewalks</option>
+                <option>Concrete Repair</option>
+                <option>Commercial Concrete</option>
+                <option>Epoxy Floors</option>
+              </select>
+
+              <button
+                type="submit"
                 style={{
-                  backgroundColor: "#fff",
-                  padding: "10px 14px",
-                  borderRadius: "999px",
-                  boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
+                  backgroundColor: "#111",
+                  color: "#fff",
+                  padding: "14px",
+                  border: "none",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                  borderRadius: "8px",
                 }}
               >
-                {area}
-              </span>
-            ))}
+                Submit Request
+              </button>
+            </form>
           </div>
         </div>
       </section>
     </main>
-    <section style={{ padding: "50px 20px", backgroundColor: "#fff" }}>
-  <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-    <h2>Get a Free Quote</h2>
-
-    <form
-      action=https://formspree.io/f/xwvrgqzb
-      method="POST"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "10px",
-        marginTop: "20px",
-      }}
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone" required />
-
-      <select name="service" required>
-        <option value="">Select Service</option>
-        <option>Driveway</option>
-        <option>Patio</option>
-        <option>Sidewalk</option>
-        <option>Commercial</option>
-        <option>Epoxy</option>
-      </select>
-
-      <button
-        type="submit"
-        style={{
-          backgroundColor: "#111",
-          color: "#fff",
-          padding: "12px",
-          border: "none",
-          cursor: "pointer",
-        }}
-      >
-        Submit Request
-      </button>
-    </form>
-  </div>
-<section style={{ padding: "50px 20px", backgroundColor: "#fff" }}>
-  <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-    <h2>Get a Free Quote</h2>
-
-    <form
-      action="https://formspree.io/f/xxxxabcd"
-      method="POST"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "10px",
-        marginTop: "20px",
-      }}
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone" required />
-
-      <select name="service" required>
-        <option value="">Select Service</option>
-        <option>Driveway</option>
-        <option>Patio</option>
-        <option>Sidewalk</option>
-        <option>Commercial</option>
-        <option>Epoxy</option>
-      </select>
-
-      <button
-        type="submit"
-        style={{
-          backgroundColor: "#111",
-          color: "#fff",
-          padding: "12px",
-          border: "none",
-          cursor: "pointer",
-        }}
-      >
-        Submit Request
-      </button>
-    </form>
-  </div>
-</section>
   );
 }
