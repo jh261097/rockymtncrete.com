@@ -155,5 +155,88 @@ export default function Page() {
         </div>
       </section>
     </main>
+    <section style={{ padding: "50px 20px", backgroundColor: "#fff" }}>
+  <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+    <h2>Get a Free Quote</h2>
+
+    <form
+      action="https://formspree.io/f/xxxxabcd"
+      method="POST"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
+        marginTop: "20px",
+      }}
+    >
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone" required />
+
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Driveway</option>
+        <option>Patio</option>
+        <option>Sidewalk</option>
+        <option>Commercial</option>
+        <option>Epoxy</option>
+      </select>
+
+      <button
+        type="submit"
+        style={{
+          backgroundColor: "#111",
+          color: "#fff",
+          padding: "12px",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        Submit Request
+      </button>
+    </form>
+  </div>
+<section style={{ padding: "50px 20px", backgroundColor: "#fff" }}>
+  <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+    <h2>Get a Free Quote</h2>
+
+    <form
+      action="https://formspree.io/f/xxxxabcd"
+      method="POST"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "10px",
+        marginTop: "20px",
+      }}
+    >
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone" required />
+
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Driveway</option>
+        <option>Patio</option>
+        <option>Sidewalk</option>
+        <option>Commercial</option>
+        <option>Epoxy</option>
+      </select>
+
+      <button
+        type="submit"
+        style={{
+          backgroundColor: "#111",
+          color: "#fff",
+          padding: "12px",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        Submit Request
+      </button>
+    </form>
+  </div>
+</section>
   );
 }
