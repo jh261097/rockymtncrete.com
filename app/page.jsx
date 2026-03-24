@@ -40,7 +40,10 @@ export default function Page() {
             ROCKY MOUNTAIN CRETE LLC
           </p>
           <h1 style={{ fontSize: "52px", margin: "0 0 18px 0", lineHeight: 1.1 }}>
-            Concrete Done Right Without Breaking the Bank
+  Built to Last. Crafted with Precision.
+  <br />
+  Built for Colorado.
+</h1>
           </h1>
           <p style={{ fontSize: "20px", maxWidth: "720px", lineHeight: 1.6 }}>
             Reliable concrete services for homeowners and businesses across Colorado.
