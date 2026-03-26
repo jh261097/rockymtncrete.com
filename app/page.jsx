@@ -15,26 +15,40 @@ export default function Page() {
   const [activeCategory, setActiveCategory] = useState("Stamped Concrete");
 
   const gallery = {
-    "Stamped Concrete": [
-      "/Stamped1.jpg",
-      "/stamped2.jpg",
-      "/stamped3.jpg",
-      "/stamped4.jpg",
-      "/stamped5.jpg",
-    ],
-    Concrete: [
-      "/concrete1.jpg",
-      "/concrete2.jpg",
-      "/concrete3.jpg",
-      "/concrete4.jpg",
-      "/concrete5.jpg",
-    ],
-    "Epoxy Floors": [
-      "/epoxy1.jpg",
-      "/epoxy2.jpg",
-      "/epoxy3.jpg",
-      "/epoxy4.jpg",
-      "/epoxy5.jpg",
+    const gallery = {
+  "Stamped Concrete": [
+    "/Stamped1.jpg",
+    "/stamped2.jpg",
+    "/stamped3.jpg",
+    "/stamped4.jpg",
+    "/stamped5.jpg",
+    "/stamped6.jpg",
+    "/stamped11.jpg",
+  ],
+  Concrete: [
+    "/concrete1.jpg",
+    "/concrete2.jpg",
+    "/concrete3.jpg",
+    "/concrete4.jpg",
+    "/concrete5.jpg",
+    "/concrete6.jpeg",
+    "/concrete7.jpeg",
+    "/concrete8.jpg",
+    "/concrete9.jpeg",
+    "/concrete10.jpeg",
+  ],
+  "Epoxy Floors": [
+    "/epoxy2.jpg",
+    "/epoxy3.jpg",
+    "/epoxy4.jpg",
+    "/epoxy5.jpg",
+    "/epoxy6.jpg",
+    "/epoxy7.jpg",
+    "/epoxy8.jpg",
+    "/epoxy9.jpeg",
+    "/epoxy10.JPG",
+  ],
+};
     ],
   };
 
