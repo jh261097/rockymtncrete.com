@@ -4,6 +4,31 @@ import { useState } from "react";
 
 export default function Page() {
   const services = [
+    const [activeCategory, setActiveCategory] = useState("Stamped Concrete");
+
+const gallery = {
+  "Stamped Concrete": [
+    "/Stamped1.jpg",
+    "/stamped2.jpg",
+    "/stamped3.jpg",
+    "/stamped4.jpg",
+    "/stamped5.jpg",
+  ],
+  Concrete: [
+    "/concrete1.jpg",
+    "/concrete2.jpg",
+    "/concrete3.jpg",
+    "/concrete4.jpg",
+    "/concrete5.jpg",
+  ],
+  "Epoxy Floors": [
+    "/epoxy1.jpg",
+    "/epoxy2.jpg",
+    "/epoxy3.jpg",
+    "/epoxy4.jpg",
+    "/epoxy5.jpg",
+  ],
+};
     "Driveways",
     "Patios",
     "Sidewalks",
