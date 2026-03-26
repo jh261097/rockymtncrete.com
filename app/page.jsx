@@ -4,31 +4,6 @@ import { useState } from "react";
 
 export default function Page() {
   const services = [
-    const [activeCategory, setActiveCategory] = useState("Stamped Concrete");
-
-const gallery = {
-  "Stamped Concrete": [
-    "/Stamped1.jpg",
-    "/stamped2.jpg",
-    "/stamped3.jpg",
-    "/stamped4.jpg",
-    "/stamped5.jpg",
-  ],
-  Concrete: [
-    "/concrete1.jpg",
-    "/concrete2.jpg",
-    "/concrete3.jpg",
-    "/concrete4.jpg",
-    "/concrete5.jpg",
-  ],
-  "Epoxy Floors": [
-    "/epoxy1.jpg",
-    "/epoxy2.jpg",
-    "/epoxy3.jpg",
-    "/epoxy4.jpg",
-    "/epoxy5.jpg",
-  ],
-};
     "Driveways",
     "Patios",
     "Sidewalks",
@@ -36,6 +11,32 @@ const gallery = {
     "Commercial Concrete",
     "Epoxy Floors",
   ];
+
+  const [activeCategory, setActiveCategory] = useState("Stamped Concrete");
+
+  const gallery = {
+    "Stamped Concrete": [
+      "/Stamped1.jpg",
+      "/stamped2.jpg",
+      "/stamped3.jpg",
+      "/stamped4.jpg",
+      "/stamped5.jpg",
+    ],
+    Concrete: [
+      "/concrete1.jpg",
+      "/concrete2.jpg",
+      "/concrete3.jpg",
+      "/concrete4.jpg",
+      "/concrete5.jpg",
+    ],
+    "Epoxy Floors": [
+      "/epoxy1.jpg",
+      "/epoxy2.jpg",
+      "/epoxy3.jpg",
+      "/epoxy4.jpg",
+      "/epoxy5.jpg",
+    ],
+  };
 
   return (
     <main
@@ -46,7 +47,6 @@ const gallery = {
         minHeight: "100vh",
       }}
     >
-      {/* HERO */}
       <section
         style={{
           backgroundColor: "#111",
@@ -101,14 +101,6 @@ const gallery = {
         </div>
       </section>
 
-      {/* SERVICES */}
-      const [activeCategory, setActiveCategory] = useState("Stamped Concrete");
-
-const gallery = {
-  "Stamped Concrete": ["/stamped1.jpg", "/stamped2.jpg"],
-  Concrete: ["/concrete1.jpg", "/concrete2.jpg"],
-  "Epoxy Floors": ["/epoxy1.jpg", "/epoxy2.jpg"],
-};
       <section style={{ padding: "60px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>Our Services</h2>
@@ -136,68 +128,67 @@ const gallery = {
           </div>
         </div>
       </section>
-      {/* GALLERY */}
-<section style={{ padding: "60px 24px", backgroundColor: "#efefef" }}>
-  <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-    <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Our Work</h2>
-    <p style={{ fontSize: "18px", color: "#555", marginBottom: "24px" }}>
-      Browse real project photos by category.
-    </p>
 
-    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "30px" }}>
-      {Object.keys(gallery).map((category) => (
-        <button
-          key={category}
-          onClick={() => setActiveCategory(category)}
-          style={{
-            padding: "12px 18px",
-            borderRadius: "999px",
-            border: activeCategory === category ? "2px solid #111" : "1px solid #ccc",
-            backgroundColor: activeCategory === category ? "#111" : "#fff",
-            color: activeCategory === category ? "#fff" : "#111",
-            fontWeight: "bold",
-            cursor: "pointer",
-          }}
-        >
-          {category}
-        </button>
-      ))}
-    </div>
+      <section style={{ padding: "60px 24px", backgroundColor: "#efefef" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Our Work</h2>
+          <p style={{ fontSize: "18px", color: "#555", marginBottom: "24px" }}>
+            Browse real project photos by category.
+          </p>
 
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-        gap: "18px",
-      }}
-    >
-      {gallery[activeCategory].map((image, index) => (
-        <div
-          key={index}
-          style={{
-            backgroundColor: "#fff",
-            borderRadius: "14px",
-            overflow: "hidden",
-            boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
-          }}
-        >
-          <img
-            src={image}
-            alt={`${activeCategory} project ${index + 1}`}
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "30px" }}>
+            {Object.keys(gallery).map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                style={{
+                  padding: "12px 18px",
+                  borderRadius: "999px",
+                  border: activeCategory === category ? "2px solid #111" : "1px solid #ccc",
+                  backgroundColor: activeCategory === category ? "#111" : "#fff",
+                  color: activeCategory === category ? "#fff" : "#111",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          <div
             style={{
-              width: "100%",
-              height: "260px",
-              objectFit: "cover",
-              display: "block",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "18px",
             }}
-          />
+          >
+            {gallery[activeCategory].map((image, index) => (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: "14px",
+                  overflow: "hidden",
+                  boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
+                }}
+              >
+                <img
+                  src={image}
+                  alt={`${activeCategory} project ${index + 1}`}
+                  style={{
+                    width: "100%",
+                    height: "260px",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
-      {/* QUOTE FORM */}
       <section id="quote" style={{ padding: "0 24px 70px 24px" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <div
