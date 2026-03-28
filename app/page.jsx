@@ -11,55 +11,56 @@ export default function Page() {
   ];
 
   const gallery = [
-  "/img1.jpg",
-  "/img2.jpg",
-  "/img3.jpg",
-  "/img4.jpg",
-  "/img5.jpg",
-  "/img6.jpg",
-  "/img7.jpg",
-  "/img8.jpg",
-  "/img9.jpg",
-  "/img10.jpg",
-  "/img11.jpg",
-  "/img12.jpg",
-  "/img13.jpg",
-  "/img14.jpg",
-  "/img15.jpg",
-  "/img16.jpg",
-  "/img17.jpg",
-  "/img18.jpg",
-  "/img19.jpg",
-  "/img20.jpg",
-  "/img21.jpg",
-  "/img22.jpg",
-  "/img23.jpg",
-  "/img24.jpg",
-  "/img25.jpg",
-  "/img26.jpg",
-  "/img27.jpg",
-  "/img28.jpg",
-  "/img29.jpg",
-  "/img30.jpg",
-  "/img31.jpg",
-  "/img32.jpg",
-  "/img33.jpg",
-  "/img34.jpg",
-  "/img35.jpg",
-  "/img36.jpg",
-  "/img37.jpg",
-  "/img38.jpg",
-  "/img39.jpg",
-  "/img40.jpg",
-  "/img41.jpg",
-  "/img42.jpg",
-  "/img43.jpg",
-  "/img44.jpg",
-  "/img45.jpg",
-  "/img46.jpg",
-  "/img47.jpg",
-  "/img48.jpg",
-];
+    "/img1.jpg",
+    "/img2.jpg",
+    "/img3.jpg",
+    "/img4.jpg",
+    "/img5.jpg",
+    "/img6.jpg",
+    "/img7.jpg",
+    "/img8.jpg",
+    "/img9.jpg",
+    "/img10.jpg",
+    "/img11.jpg",
+    "/img12.jpg",
+    "/img13.jpg",
+    "/img14.jpg",
+    "/img15.jpg",
+    "/img16.jpg",
+    "/img17.jpg",
+    "/img18.jpg",
+    "/img19.jpg",
+    "/img20.jpg",
+    "/img21.jpg",
+    "/img22.jpg",
+    "/img23.jpg",
+    "/img24.jpg",
+    "/img25.jpg",
+    "/img26.jpg",
+    "/img27.jpg",
+    "/img28.jpg",
+    "/img29.jpg",
+    "/img30.jpg",
+    "/img31.jpg",
+    "/img32.jpg",
+    "/img33.jpg",
+    "/img34.jpg",
+    "/img35.jpg",
+    "/img36.jpg",
+    "/img37.jpg",
+    "/img38.jpg",
+    "/img39.jpg",
+    "/img40.jpg",
+    "/img41.jpg",
+    "/img42.jpg",
+    "/img43.jpg",
+    "/img44.jpg",
+    "/img45.jpg",
+    "/img46.jpg",
+    "/img47.jpg",
+    "/img48.jpg",
+  ];
+
   return (
     <main
       style={{
@@ -69,6 +70,7 @@ export default function Page() {
         minHeight: "100vh",
       }}
     >
+      {/* HERO */}
       <section
         style={{
           backgroundColor: "#111",
@@ -137,6 +139,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* SERVICES */}
       <section style={{ padding: "60px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>Our Services</h2>
@@ -165,6 +168,7 @@ export default function Page() {
         </div>
       </section>
 
+      {/* GALLERY */}
       <section id="gallery" style={{ padding: "60px 24px", backgroundColor: "#efefef" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Gallery</h2>
@@ -180,35 +184,24 @@ export default function Page() {
             }}
           >
             {gallery.map((image, i) => (
-  <img
-    key={i}
-    src={image}
-    alt={`Gallery ${i}`}
-    style={{
-      width: "100%",
-      height: "260px",
-      objectFit: "cover",
-      borderRadius: "12px"
-    }}
-  />
-))}
-              >
-                <img
-                  src={image}
-                  alt={`Gallery project ${index + 1}`}
-                  style={{
-                    width: "100%",
-                    height: "260px",
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
-              </div>
+              <img
+                key={i}
+                src={image}
+                alt={`Gallery ${i + 1}`}
+                style={{
+                  width: "100%",
+                  height: "260px",
+                  objectFit: "cover",
+                  borderRadius: "12px",
+                  display: "block",
+                }}
+              />
             ))}
           </div>
         </div>
       </section>
 
+      {/* QUOTE */}
       <section id="quote" style={{ padding: "0 24px 70px 24px" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <div
@@ -236,9 +229,7 @@ export default function Page() {
               <input type="tel" name="phone" placeholder="Phone Number" required style={{ padding: "14px" }} />
 
               <select name="service" required style={{ padding: "14px" }} defaultValue="">
-                <option value="" disabled>
-                  Select Service
-                </option>
+                <option value="" disabled>Select Service</option>
                 <option>Driveways</option>
                 <option>Patios</option>
                 <option>Sidewalks</option>
