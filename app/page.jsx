@@ -11,14 +11,36 @@ export default function Page() {
   ];
 
   const gallery = [
+    "/Stamped1.jpg",
+    "/stamped2.jpg",
+    "/stamped3.jpg",
+    "/stamped4.jpg",
+    "/stamped5.jpg",
     "/stamped6.jpg",
     "/stamped7.jpg",
     "/stamped8.jpg",
+    "/stamped9.jpg",
+    "/stamped11.jpg",
+    "/concrete1.jpg",
+    "/concrete2.jpg",
+    "/concrete3.jpg",
+    "/concrete4.jpg",
+    "/concrete5.jpg",
+    "/concrete6.jpeg",
     "/concrete7.jpeg",
     "/concrete8.jpg",
+    "/concrete9.jpeg",
+    "/concrete10.jpeg",
+    "/epoxy1.jpg",
+    "/epoxy2.jpg",
+    "/epoxy3.jpg",
+    "/epoxy4.jpg",
+    "/epoxy5.jpg",
     "/epoxy6.jpg",
     "/epoxy7.jpg",
     "/epoxy8.jpg",
+    "/epoxy9.jpeg",
+    "/epoxy10.JPG",
   ];
 
   return (
@@ -188,29 +210,9 @@ export default function Page() {
                 marginTop: "20px",
               }}
             >
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                required
-                style={{ padding: "14px" }}
-              />
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                style={{ padding: "14px" }}
-              />
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                required
-                style={{ padding: "14px" }}
-              />
+              <input type="text" name="name" placeholder="Name" required style={{ padding: "14px" }} />
+              <input type="email" name="email" placeholder="Email" required style={{ padding: "14px" }} />
+              <input type="tel" name="phone" placeholder="Phone Number" required style={{ padding: "14px" }} />
 
               <select name="service" required style={{ padding: "14px" }} defaultValue="">
                 <option value="" disabled>
