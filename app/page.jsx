@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 export default function Page() {
   const services = [
     "Driveways",
@@ -12,18 +10,16 @@ export default function Page() {
     "Epoxy Floors",
   ];
 
-  const [activeCategory, setActiveCategory] = useState("Stamped Concrete");
-
-  const gallery = {
-  "/stamped6.jpg",
-  "/stamped7.jpg",
-  "/stamped8.jpg",
-  "/concrete7.jpeg",
-  "/concrete8.jpg",
-  "/epoxy6.jpg",
-  "/epoxy7.jpg",
-  "/epoxy8.jpg",
-};
+  const gallery = [
+    "/stamped6.jpg",
+    "/stamped7.jpg",
+    "/stamped8.jpg",
+    "/concrete7.jpeg",
+    "/concrete8.jpg",
+    "/epoxy6.jpg",
+    "/epoxy7.jpg",
+    "/epoxy8.jpg",
+  ];
 
   return (
     <main
@@ -72,6 +68,20 @@ export default function Page() {
             </a>
 
             <a
+              href="#gallery"
+              style={{
+                backgroundColor: "#fff",
+                color: "#111",
+                padding: "14px 22px",
+                textDecoration: "none",
+                borderRadius: "8px",
+                fontWeight: "bold",
+              }}
+            >
+              View Gallery
+            </a>
+
+            <a
               href="#quote"
               style={{
                 backgroundColor: "#f59e0b",
@@ -116,32 +126,12 @@ export default function Page() {
         </div>
       </section>
 
-      <section style={{ padding: "60px 24px", backgroundColor: "#efefef" }}>
+      <section id="gallery" style={{ padding: "60px 24px", backgroundColor: "#efefef" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Our Work</h2>
+          <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Gallery</h2>
           <p style={{ fontSize: "18px", color: "#555", marginBottom: "24px" }}>
-            Browse real project photos by category.
+            Take a look at some of our recent work.
           </p>
-
-          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "30px" }}>
-            {Object.keys(gallery).map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                style={{
-                  padding: "12px 18px",
-                  borderRadius: "999px",
-                  border: activeCategory === category ? "2px solid #111" : "1px solid #ccc",
-                  backgroundColor: activeCategory === category ? "#111" : "#fff",
-                  color: activeCategory === category ? "#fff" : "#111",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
 
           <div
             style={{
@@ -150,7 +140,7 @@ export default function Page() {
               gap: "18px",
             }}
           >
-            {gallery[activeCategory].map((image, index) => (
+            {gallery.map((image, index) => (
               <div
                 key={index}
                 style={{
@@ -162,7 +152,7 @@ export default function Page() {
               >
                 <img
                   src={image}
-                  alt={`${activeCategory} project ${index + 1}`}
+                  alt={`Gallery project ${index + 1}`}
                   style={{
                     width: "100%",
                     height: "260px",
