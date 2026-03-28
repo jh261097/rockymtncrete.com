@@ -249,6 +249,18 @@ export default function Page() {
                   cursor: "pointer",
                   borderRadius: "8px",
                 }}
+                export default function Page() {
+  return (
+    <main style={{ padding: "40px", fontFamily: "Arial, sans-serif" }}>
+      <h1>Rocky Mountain Crete LLC</h1>
+      <img
+        src="/img1.jpg"
+        alt="Test"
+        style={{ width: "300px", height: "300px", objectFit: "cover" }}
+      />
+    </main>
+  );
+}
               >
                 Submit Request
               </button>
