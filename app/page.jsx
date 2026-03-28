@@ -179,15 +179,19 @@ export default function Page() {
               gap: "18px",
             }}
           >
-            {gallery.map((image, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundColor: "#fff",
-                  borderRadius: "14px",
-                  overflow: "hidden",
-                  boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
-                }}
+            {gallery.map((image, i) => (
+  <img
+    key={i}
+    src={image}
+    alt={`Gallery ${i}`}
+    style={{
+      width: "100%",
+      height: "260px",
+      objectFit: "cover",
+      borderRadius: "12px"
+    }}
+  />
+))}
               >
                 <img
                   src={image}
