@@ -83,188 +83,53 @@ export default function Page() {
             ROCKY MOUNTAIN CRETE LLC
           </p>
 
-          <h1 style={{ fontSize: "52px", margin: "0 0 18px 0", lineHeight: 1.1 }}>
+          <h1 style={{ fontSize: "52px", margin: "0 0 18px 0" }}>
             Built to Last. Crafted with Precision.
-            <br />
-            Built for Colorado.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "720px", lineHeight: 1.6 }}>
-            Reliable concrete services for homeowners and businesses across Colorado.
-          </p>
-
-          <div style={{ marginTop: "28px", display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <a
-              href="tel:7192019660"
-              style={{
-                backgroundColor: "#fff",
-                color: "#111",
-                padding: "14px 22px",
-                textDecoration: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              Call Now
-            </a>
-
-            <a
-              href="#gallery"
-              style={{
-                backgroundColor: "#fff",
-                color: "#111",
-                padding: "14px 22px",
-                textDecoration: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              View Gallery
-            </a>
-
-            <a
-              href="#quote"
-              style={{
-                backgroundColor: "#f59e0b",
-                color: "#111",
-                padding: "14px 22px",
-                textDecoration: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              Get Free Quote
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section style={{ padding: "60px 24px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>Our Services</h2>
-
-          <div
+          <a
+            href="#gallery"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "18px",
+              backgroundColor: "#fff",
+              color: "#111",
+              padding: "12px 20px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontWeight: "bold",
             }}
           >
-            {services.map((service) => (
-              <div
-                key={service}
-                style={{
-                  backgroundColor: "#fff",
-                  padding: "24px",
-                  borderRadius: "12px",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-                }}
-              >
-                <h3 style={{ margin: 0, fontSize: "24px" }}>{service}</h3>
-              </div>
-            ))}
-          </div>
+            View Gallery
+          </a>
         </div>
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" style={{ padding: "60px 24px", backgroundColor: "#efefef" }}>
+      <section id="gallery" style={{ padding: "60px 24px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Gallery</h2>
-          <p style={{ fontSize: "18px", color: "#555", marginBottom: "24px" }}>
-            Take a look at some of our recent work.
-          </p>
+          <h2 style={{ fontSize: "36px", marginBottom: "20px" }}>
+            Gallery
+          </h2>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "18px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: "16px",
             }}
           >
-            {gallery.map((image, i) => (
+            {gallery.map((img, i) => (
               <img
                 key={i}
-                src={image}
-                alt={`Gallery ${i + 1}`}
+                src={img}
+                alt={`img-${i}`}
                 style={{
                   width: "100%",
-                  height: "260px",
+                  height: "250px",
                   objectFit: "cover",
-                  borderRadius: "12px",
-                  display: "block",
+                  borderRadius: "10px",
                 }}
               />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* QUOTE */}
-      <section id="quote" style={{ padding: "0 24px 70px 24px" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <div
-            style={{
-              backgroundColor: "#fff",
-              padding: "32px",
-              borderRadius: "12px",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-            }}
-          >
-            <h2 style={{ fontSize: "36px", marginTop: 0 }}>Get a Free Quote</h2>
-
-            <form
-              action="https://formspree.io/f/xwvrgqzb"
-              method="POST"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "12px",
-                marginTop: "20px",
-              }}
-            >
-              <input type="text" name="name" placeholder="Name" required style={{ padding: "14px" }} />
-              <input type="email" name="email" placeholder="Email" required style={{ padding: "14px" }} />
-              <input type="tel" name="phone" placeholder="Phone Number" required style={{ padding: "14px" }} />
-
-              <select name="service" required style={{ padding: "14px" }} defaultValue="">
-                <option value="" disabled>Select Service</option>
-                <option>Driveways</option>
-                <option>Patios</option>
-                <option>Sidewalks</option>
-                <option>Concrete Repair</option>
-                <option>Commercial Concrete</option>
-                <option>Epoxy Floors</option>
-              </select>
-
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: "#111",
-                  color: "#fff",
-                  padding: "14px",
-                  border: "none",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  borderRadius: "8px",
-                }}
-                export default function Page() {
-  return (
-    <main style={{ padding: "40px", fontFamily: "Arial, sans-serif" }}>
-      <h1>Rocky Mountain Crete LLC</h1>
-      <img
-        src="/img1.jpg"
-        alt="Test"
-        style={{ width: "300px", height: "300px", objectFit: "cover" }}
-      />
-    </main>
-  );
-}
-              >
-                Submit Request
-              </button>
-            </form>
           </div>
         </div>
       </section>
