@@ -1,15 +1,6 @@
 "use client";
 
 export default function Page() {
-  const services = [
-    "Driveways",
-    "Patios",
-    "Sidewalks",
-    "Concrete Repair",
-    "Commercial Concrete",
-    "Epoxy Floors",
-  ];
-
   const gallery = [
     "/img1.jpg",
     "/img2.jpg",
@@ -62,260 +53,99 @@ export default function Page() {
   ];
 
   return (
-    <main
-      style={{
-        fontFamily: "Arial, sans-serif",
-        backgroundColor: "#f7f7f7",
-        color: "#111",
-        minHeight: "100vh",
-      }}
-    >
-      <section
-        style={{
-          backgroundColor: "#111",
-          color: "#fff",
-          padding: "70px 24px",
-        }}
-      >
+    <main style={{ fontFamily: "Arial, sans-serif", background: "#f5f5f5" }}>
+      
+      {/* HERO */}
+      <section style={{ background: "#111", color: "#fff", padding: "80px 20px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <p
-            style={{
-              letterSpacing: "1px",
-              marginBottom: "10px",
-              color: "#ccc",
-            }}
-          >
-            ROCKY MOUNTAIN CRETE LLC
-          </p>
-
-          <h1
-            style={{
-              fontSize: "52px",
-              margin: "0 0 18px 0",
-              lineHeight: 1.1,
-            }}
-          >
-            Built to Last. Crafted with Precision.
-            <br />
-            Built for Colorado.
+          <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
+            Rocky Mountain Crete
           </h1>
-
-          <p
-            style={{
-              fontSize: "20px",
-              maxWidth: "720px",
-              lineHeight: 1.6,
-              marginBottom: "28px",
-            }}
-          >
-            Reliable concrete services for homeowners and businesses across Colorado.
+          <p style={{ fontSize: "20px", marginBottom: "30px", color: "#ccc" }}>
+            Concrete work done right the first time. Built to last.
           </p>
 
-          <div
+          <a
+            href="#gallery"
             style={{
-              display: "flex",
-              gap: "14px",
-              flexWrap: "wrap",
+              background: "#fff",
+              color: "#111",
+              padding: "14px 22px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontWeight: "bold",
             }}
           >
-            <a
-              href="tel:7192019660"
-              style={{
-                backgroundColor: "#fff",
-                color: "#111",
-                padding: "14px 22px",
-                textDecoration: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              Call Now
-            </a>
-
-            <a
-              href="#gallery"
-              style={{
-                backgroundColor: "#fff",
-                color: "#111",
-                padding: "14px 22px",
-                textDecoration: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              View Gallery
-            </a>
-
-            <a
-              href="#quote"
-              style={{
-                backgroundColor: "#f59e0b",
-                color: "#111",
-                padding: "14px 22px",
-                textDecoration: "none",
-                borderRadius: "8px",
-                fontWeight: "bold",
-              }}
-            >
-              Get Free Quote
-            </a>
-          </div>
+            View Our Work
+          </a>
         </div>
       </section>
 
-      <section style={{ padding: "60px 24px" }}>
+      {/* GALLERY */}
+      <section id="gallery" style={{ padding: "60px 20px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>Our Services</h2>
+          <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Our Work</h2>
+          <p style={{ marginBottom: "30px", color: "#555" }}>
+            Real projects. Real results.
+          </p>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "18px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "20px",
             }}
           >
-            {services.map((service) => (
+            {gallery.map((img, i) => (
               <div
-                key={service}
+                key={i}
                 style={{
-                  backgroundColor: "#fff",
-                  padding: "24px",
+                  background: "#fff",
                   borderRadius: "12px",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                  overflow: "hidden",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                 }}
               >
-                <h3 style={{ margin: 0, fontSize: "24px" }}>{service}</h3>
+                <img
+                  src={img}
+                  alt={`Project ${i + 1}`}
+                  style={{
+                    width: "100%",
+                    height: "260px",
+                    objectFit: "cover",
+                  }}
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section
-        id="gallery"
-        style={{
-          padding: "60px 24px",
-          backgroundColor: "#efefef",
-        }}
-      >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "10px" }}>Gallery</h2>
-          <p
-            style={{
-              fontSize: "18px",
-              color: "#555",
-              marginBottom: "24px",
-            }}
-          >
-            Take a look at some of our recent work.
+      {/* CTA */}
+      <section style={{ padding: "60px 20px", background: "#111", color: "#fff" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+          <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
+            Ready to Start Your Project?
+          </h2>
+          <p style={{ marginBottom: "30px", color: "#ccc" }}>
+            Call or text for a fast, free estimate.
           </p>
 
-          <div
+          <a
+            href="tel:7192019660"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "18px",
+              background: "#fff",
+              color: "#111",
+              padding: "14px 24px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontWeight: "bold",
             }}
           >
-            {gallery.map((image, i) => (
-              <img
-                key={i}
-                src={image}
-                alt={`Gallery ${i + 1}`}
-                style={{
-                  width: "100%",
-                  height: "260px",
-                  objectFit: "cover",
-                  borderRadius: "12px",
-                  display: "block",
-                  backgroundColor: "#ddd",
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="quote" style={{ padding: "0 24px 70px 24px" }}>
-        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
-          <div
-            style={{
-              backgroundColor: "#fff",
-              padding: "32px",
-              borderRadius: "12px",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-            }}
-          >
-            <h2 style={{ fontSize: "36px", marginTop: 0 }}>Get a Free Quote</h2>
-
-            <form
-              action="https://formspree.io/f/xwvrgqzb"
-              method="POST"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "12px",
-                marginTop: "20px",
-              }}
-            >
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                required
-                style={{ padding: "14px" }}
-              />
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                style={{ padding: "14px" }}
-              />
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                required
-                style={{ padding: "14px" }}
-              />
-
-              <select
-                name="service"
-                required
-                style={{ padding: "14px" }}
-                defaultValue=""
-              >
-                <option value="" disabled>
-                  Select Service
-                </option>
-                <option>Driveways</option>
-                <option>Patios</option>
-                <option>Sidewalks</option>
-                <option>Concrete Repair</option>
-                <option>Commercial Concrete</option>
-                <option>Epoxy Floors</option>
-              </select>
-
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: "#111",
-                  color: "#fff",
-                  padding: "14px",
-                  border: "none",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  borderRadius: "8px",
-                }}
-              >
-                Submit Request
-              </button>
-            </form>
-          </div>
+            Call Now
+          </a>
         </div>
       </section>
     </main>
   );
+}
